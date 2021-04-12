@@ -249,7 +249,7 @@ class Shiki {
     if (requestConfig.method === Method.Get && isSuccess) {
       return
     }
-    let messageText = result?.msg
+    let messageText = result && result.msg
     if (error) {
       messageText = error.toString()
     }

@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "dev": "vite --mode dev",
-    "build": "vite build",
+    "build": "vite build --mode prod",
     "serve": "vite preview"
   },
   "dependencies": {
@@ -18,6 +18,6 @@
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.1.4",
     "@vue/compiler-sfc": "^3.0.5",
-    "vite": "^2.1.2"
+    "vite": "^2.1.5"
   }
 }

@@ -1,11 +1,5 @@
 <template>
-  <thorn-dialog
-    title="保存模版"
-    width="450px"
-    @next="onSave"
-    @open="onOpen"
-    @close="onClose"
-  >
+  <thorn-dialog title="保存模版" width="450px" @next="onSave" @close="onClose">
     <el-form label-width="80px" label-position="left">
       <el-form-item label="模版名称:">
         <el-input v-model="state.form.title"></el-input>
@@ -34,7 +28,10 @@ export default {
     const store = useStore()
     // 表单
     const state = reactive({
-      form: {}
+      form: {
+        title: '',
+        describe: ''
+      }
     })
     // 保存
     async function onSave() {
@@ -43,16 +40,12 @@ export default {
       const ret = await shiki.postCode('template/save', params)
       console.log(ret)
     }
-    // 打开
-    function onOpen() {
-      state.form = { ...props.row }
-    }
     // 关闭
     function onClose() {
       context.emit('update:modelValue', false)
     }
 
-    return { state, onSave, onOpen, onClose }
+    return { state, onSave, onClose }
   }
 }
 </script>

@@ -5,7 +5,7 @@
   "license": "MIT",
   "devDependencies": {
     "@types/qs": "^6.9.6",
-    "vite": "^2.1.2"
+    "vite": "^2.1.5"
   },
   "dependencies": {
     "abortcontroller-polyfill": "^1.7.1",

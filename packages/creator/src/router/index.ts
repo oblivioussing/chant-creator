@@ -6,7 +6,10 @@ const editor = () => import('@/views/editor/editor.vue') // 编辑
 const routes = [
   {
     path: '/',
-    component: index
+    component: index,
+    redirect: () => {
+      return { path: '/editor' }
+    }
   },
   {
     path: '/editor',

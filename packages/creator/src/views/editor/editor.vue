@@ -20,7 +20,11 @@ import CustomSetting from '@/components/custom-setting/CustomSetting.vue'
 
 export default {
   components: { NavBar, NavMenu, Compose, CustomSetting },
-  created() {},
+  created() {
+    const a = { b: 1 }
+    const b = a?.b
+    console.log(b)
+  },
   methods: {}
 }
 </script>
