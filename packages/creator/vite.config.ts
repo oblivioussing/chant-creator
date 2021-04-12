@@ -3,11 +3,6 @@ import vue from '@vitejs/plugin-vue'
 import { resolve } from 'path'
 
 export default defineConfig({
-  resolve: {
-    alias: {
-      '@': resolve(__dirname, 'src')
-    }
-  },
   css: {
     preprocessorOptions: {
       scss: {
@@ -16,7 +11,15 @@ export default defineConfig({
       }
     }
   },
+  optimizeDeps: {
+    exclude: ['element-plus', 'vue', 'vue-router', 'vuex']
+  },
   plugins: [vue()],
+  resolve: {
+    alias: {
+      '@': resolve(__dirname, 'src')
+    }
+  },
   server: {
     port: 3000
   }
