@@ -8,24 +8,27 @@
     <!-- 保存模版 -->
     <template-save v-if="state.templateVisible" v-model="state.templateVisible">
     </template-save>
+    <test v-if="state.testVisible" v-model:visible="state.testVisible"> </test>
+    {{ state.testVisible }}
   </div>
 </template>
 
 <script lang="ts">
 import { reactive } from 'vue'
 import TemplateSave from './TemplateSave.vue' // 保存模版
+import Test from './Test.vue'
 
 export default {
   name: 'nav-bar',
-  components: { TemplateSave },
+  components: { TemplateSave, Test },
   setup() {
     const state = reactive({
       templateVisible: false,
-      testVisible: true
+      testVisible: false
     })
     // 保存
     function onTemplateSave() {
-      state.templateVisible = true
+      state.testVisible = true
     }
 
     return { state, onTemplateSave }

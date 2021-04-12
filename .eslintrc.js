@@ -6,6 +6,7 @@ module.exports = {
     es6: true,
     node: true
   },
+  extend: ['eslint:recommended'],
   parser: 'babel-eslint',
   parserOptions: { ecmaVersion: 2016, sourceType: 'module' },
   plugins: ['prettier'],
