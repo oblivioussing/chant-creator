@@ -1,12 +1,14 @@
 <template>
-  <div class="nav-bar">
-    <el-button @click="onTemplateSave" type="primary" size="small">
-      保存模版
-    </el-button>
+  <div>
+    <div class="nav-bar">
+      <el-button @click="onTemplateSave" type="primary" size="small">
+        保存模版
+      </el-button>
+    </div>
+    <!-- 保存模版 -->
+    <template-save v-if="state.templateVisible" v-model="state.templateVisible">
+    </template-save>
   </div>
-  <!-- 保存模版 -->
-  <template-save v-if="state.templateVisible" v-model="state.templateVisible">
-  </template-save>
 </template>
 
 <script lang="ts">
