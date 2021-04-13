@@ -43,8 +43,8 @@ export default {
       context.emit('edit', index)
     }
     // 删除
-    function onDelete() {
-      context.emit('delete')
+    function onDelete(index: number) {
+      context.emit('delete', index)
     }
     // 新增
     function onAdd() {

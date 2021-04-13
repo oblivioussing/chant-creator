@@ -1,26 +1,23 @@
 <template>
-  <thorn-dialog
-    title="图片编辑"
-    width="450px"
-    @next="onNext"
-    @open="onOpen"
-    @close="onClose"
-  >
+  <thorn-dialog title="图片编辑" width="450px" @close="onClose">
     <el-form label-width="80px" label-position="left">
       <el-form-item label="标题:">
-        <el-input v-model="state.form.title"></el-input>
+        <el-input v-model="form.title"></el-input>
       </el-form-item>
       <el-form-item label="描述:">
-        <el-input v-model="state.form.describe"></el-input>
+        <el-input v-model="form.describe"></el-input>
       </el-form-item>
       <el-form-item label="跳转链接:">
-        <el-input v-model="state.form.url"></el-input>
+        <el-input v-model="form.url"></el-input>
       </el-form-item>
       <el-form-item label="上传图片:">
-        <thorn-upload :url="state.form.imgUrl" @change="onChange">
-        </thorn-upload>
+        <thorn-upload :url="form.imgUrl" @change="onChange"> </thorn-upload>
       </el-form-item>
     </el-form>
+    <template #footer>
+      <el-button @click="onClose">取 消</el-button>
+      <el-button @click="onSave" type="primary">确 定</el-button>
+    </template>
   </thorn-dialog>
 </template>
 
@@ -41,30 +38,24 @@ export default {
   },
   setup(props, context) {
     // 表单
-    const state = reactive({
-      form: { ...props.row } as Row
-    })
+    const form = reactive(props.row as Row)
     // 确定
-    function onNext() {
-      context.emit('update:row', state.form)
+    function onSave() {
+      context.emit('update:row', form)
       // 关闭
       onClose()
     }
     // 图片文件变化
     function onChange(row: Record<string, any>) {
       const url = URL.createObjectURL(row.raw)
-      state.form.imgUrl = url
-    }
-    // 打开
-    function onOpen() {
-      state.form = { ...props.row } as Row
+      form.imgUrl = url
     }
     // 关闭
     function onClose() {
       context.emit('update:modelValue', false)
     }
 
-    return { state, onNext, onChange, onOpen, onClose }
+    return { form, onSave, onChange, onClose }
   }
 }
 </script>

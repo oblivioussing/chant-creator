@@ -1,5 +1,5 @@
 import qs from 'qs'
-import { Toast } from 'vant'
+import { ElMessage } from 'element-plus'
 import core from '../utils/core'
 import apiUrl from './url'
 import 'abortcontroller-polyfill/dist/polyfill-patch-fetch'
@@ -260,10 +260,7 @@ class Shiki {
     if (core.isProd() && !result) {
       messageText = '系统繁忙,请稍后再试'
     }
-    Toast({
-      message: messageText,
-      type: result ? 'text' : 'fail'
-    })
+    ElMessage.error(messageText)
   }
   // 返回结果处理
   private responseProcess(result: Result, config: RequestConfig): any {

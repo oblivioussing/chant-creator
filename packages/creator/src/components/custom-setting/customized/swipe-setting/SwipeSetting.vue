@@ -25,6 +25,7 @@
   </el-form-item>
   <!-- 图片编辑 -->
   <img-edit
+    v-if="state.imgEditVisible"
     v-model="state.imgEditVisible"
     v-model:row="currentAttr.imgList[state.imgEditIndex]"
   >

@@ -1,6 +1,7 @@
 'use strict'
 
 const Controller = require('egg').Controller
+let result = require('../model/result')
 
 class IndexController extends Controller {
   async index() {
@@ -11,8 +12,14 @@ class IndexController extends Controller {
   async save() {
     const { ctx } = this
     const body = ctx.request.body
-    const ret = await ctx.service.index.save(body)
-    ctx.body = ret
+    // 参数校验
+    if (!body.config || !body.config.length) {
+      result.code = 101
+      result.msg = '模版配置不能为空'
+    } else {
+      result = await ctx.service.index.save(body)
+    }
+    ctx.body = result
   }
 }
 

@@ -1,5 +1,5 @@
 const apiCode = {
-  success: '0' // 成功
+  success: 100 // 成功
 }
 
 export default apiCode
