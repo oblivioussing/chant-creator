@@ -11,9 +11,6 @@ export default defineConfig({
       }
     }
   },
-  optimizeDeps: {
-    exclude: ['element-plus', 'vue', 'vue-router', 'vuex']
-  },
   plugins: [vue()],
   resolve: {
     alias: {
