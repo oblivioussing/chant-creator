@@ -21,6 +21,12 @@ class IndexController extends Controller {
     }
     ctx.body = result
   }
+  // 获取模版
+  async find() {
+    const { ctx } = this
+    result = await ctx.service.index.find()
+    ctx.body = result
+  }
 }
 
 module.exports = IndexController

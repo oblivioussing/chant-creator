@@ -41,9 +41,9 @@ export default {
     })
     // form
     const form = reactive({
-      name: '',
-      type: '',
-      config: null
+      name: '', // 模版名称
+      type: '', // 模版分类
+      config: null // 配置
     })
     const formRef = ref(null)
     // rules
@@ -65,7 +65,11 @@ export default {
       state.loading = true
       const ret = await shiki.postCode('template/save', params)
       state.loading = false
-      console.log(ret)
+      if (core.isSuccess(ret)) {
+        ElMessage.success('模版保存成功')
+        // 关闭
+        onClose()
+      }
     }
     // 关闭
     function onClose() {

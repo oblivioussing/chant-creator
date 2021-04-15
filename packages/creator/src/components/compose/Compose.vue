@@ -30,9 +30,10 @@
 import { computed, reactive } from 'vue'
 import { useStore } from 'vuex'
 import { styleFit } from '@chant/common/utils'
+import base from '@/utils/base'
 
 type Nest = {
-  element: object
+  element: Record<string, any>
   newIndex: number
 }
 
@@ -57,6 +58,7 @@ export default {
       const { added, moved } = row
       // 新增
       if (added) {
+        added.element.id = base.uid()
         setCurrentIndex(added.newIndex)
       }
       // 移动
