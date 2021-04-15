@@ -91,7 +91,7 @@ export default {
   flex: 1;
   .container {
     @include hide-scroll;
-
+    background-color: $white;
     box-shadow: 2px 0 10px rgba(0, 0, 0, 0.2);
     height: 667px;
     margin: 50px 0;

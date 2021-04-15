@@ -17,6 +17,16 @@ export default [
       padding: 0
     }
   },
+  // 表单
+  {
+    component: 'chant-form',
+    label: '表单',
+    layout: true,
+    events: {},
+    style: {
+      width: '100%'
+    }
+  },
   // 图片
   {
     component: 'chant-img',
