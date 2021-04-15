@@ -1,0 +1,1 @@
+{"name":"111","type":"","config":[{"component":"chant-swipe","label":"轮播图","events":{},"attr":{"autoplay":3000,"loop":true,"vertical":false,"imgList":[{"title":"标题","describe":"描述","url":"","imgUrl":""}]},"style":{"borderRadius":0,"height":110,"margin":0,"padding":0},"id":"561618484354112"}]}

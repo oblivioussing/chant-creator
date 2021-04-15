@@ -6,10 +6,10 @@ let result = require('../model/result')
 class IndexService extends Service {
   // 保存模版
   async save(body) {
-    // const url = path.join(__dirname, 'data', 'data.json')
-    const ret = fs.writeFileSync('../data/data.json', JSON.stringify(body))
+    const data = JSON.stringify(body)
+    const ret = fs.writeFileSync('./app/data/data.json', data)
     console.log(ret)
-    return result
+    return ret
   }
 }
 
