@@ -10,7 +10,8 @@ const form = {
     bgColor: '',
     btnBgColor: '',
     btnColor: '',
-    apiUrl: ''
+    apiUrl: '',
+    config: []
   },
   style: {
     width: '100%'
