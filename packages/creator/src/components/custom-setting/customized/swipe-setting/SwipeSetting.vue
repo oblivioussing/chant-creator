@@ -16,7 +16,7 @@
   </el-form-item>
   <el-form-item label="图片列表">
     <drag-handle
-      :list="currentAttr.imgList"
+      :list="currentAttr.config"
       @edit="onEdit"
       @delete="onDelete"
       @add="onAdd"
@@ -27,7 +27,7 @@
   <img-edit
     v-if="state.imgEditVisible"
     v-model="state.imgEditVisible"
-    v-model:row="currentAttr.imgList[state.imgEditIndex]"
+    v-model:row="currentAttr.config[state.imgEditIndex]"
   >
   </img-edit>
 </template>
@@ -58,7 +58,7 @@ export default {
     }
     // 图片删除
     function onDelete(index: number) {
-      currentAttr.value.imgList.splice(index, 1)
+      currentAttr.value.config.splice(index, 1)
     }
     // 图片新增
     function onAdd() {
@@ -68,7 +68,7 @@ export default {
         url: '',
         imgUrl: ''
       }
-      currentAttr.value.imgList.push(row)
+      currentAttr.value.config.push(row)
     }
 
     return { state, currentAttr, onEdit, onDelete, onAdd }

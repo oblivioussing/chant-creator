@@ -1,14 +1,32 @@
+// 表单
+const form = {
+  component: 'chant-form',
+  label: '表单',
+  attr: {
+    title: '',
+    titleSize: 18,
+    titleColor: '',
+    titleWeight: 'bold',
+    bgColor: '',
+    btnBgColor: '',
+    btnColor: '',
+    apiUrl: ''
+  },
+  style: {
+    width: '100%'
+  }
+}
+
 export default [
   // 轮播图
   {
     component: 'chant-swipe',
     label: '轮播图',
-    events: {},
     attr: {
       autoplay: 3000,
       loop: true,
       vertical: false,
-      imgList: [{ title: '标题', describe: '描述', url: '', imgUrl: '' }]
+      config: [{ title: '标题', describe: '描述', url: '', imgUrl: '' }]
     },
     style: {
       borderRadius: 0,
@@ -18,21 +36,11 @@ export default [
     }
   },
   // 表单
-  {
-    component: 'chant-form',
-    label: '表单',
-    layout: true,
-    events: {},
-    style: {
-      width: '100%'
-    }
-  },
+  form,
   // 图片
   {
     component: 'chant-img',
     label: '图片',
-    layout: true,
-    events: {},
     style: {
       width: '100%'
     }
@@ -41,7 +49,6 @@ export default [
   {
     component: 'chant-button',
     label: '按钮',
-    events: {},
     style: {
       fontSize: 16,
       fontWeight: 'normal',
@@ -53,7 +60,6 @@ export default [
   {
     component: 'chant-field',
     label: '输入框',
-    events: {},
     style: {
       fontSize: 16,
       fontWeight: 'normal',
@@ -64,8 +70,6 @@ export default [
   {
     component: 'chant-text',
     label: '文本',
-    layout: true,
-    events: {},
     style: {
       display: 'inline-block',
       fontSize: 16,
