@@ -4,9 +4,10 @@
     :loop="state.loop"
     :vertical="state.vertical"
     indicator-color="white"
+    class="chant-swipe"
   >
     <van-swipe-item v-for="item in state.config" :key="item.url">
-      <chant-image :url="item.imgUrl"> </chant-image>
+      <chant-image :url="item.imgUrl" class="img"> </chant-image>
     </van-swipe-item>
   </van-swipe>
 </template>
@@ -34,4 +35,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.chant-swipe {
+  .img {
+    height: 100%;
+  }
+}
+</style>

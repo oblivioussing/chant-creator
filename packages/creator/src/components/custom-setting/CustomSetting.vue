@@ -5,6 +5,8 @@
       <!-- 轮播图设置 -->
       <swipe-setting v-if="current.component === 'chant-swipe'">
       </swipe-setting>
+      <!-- 表单设置 -->
+      <form-setting v-if="current.component === 'chant-form'"> </form-setting>
       <!-- 属性设置 -->
       <attr-setting></attr-setting>
       <!-- 样式设置 -->
@@ -36,6 +38,7 @@ export default {
 
 <style lang="scss" scoped>
 .custom-made {
+  @include hide-scroll;
   box-shadow: -2px 2px 4px rgba(0, 0, 0, 0.2);
   padding: 30px 20px;
   position: relative;
