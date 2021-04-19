@@ -21,11 +21,6 @@ const form = {
   component: 'chant-form',
   label: '表单',
   attr: {
-    title: '表单定制',
-    titleSize: 18,
-    titleColor: '',
-    titleWeight: 'bold',
-    bgColor: '',
     btnBgColor: '',
     btnColor: '',
     apiUrl: '',
@@ -34,20 +29,23 @@ const form = {
         label: '年龄',
         field: '',
         value: '',
-        type: 'field',
+        type: 'number',
         placeholder: '请输入年龄'
       },
       {
         label: '爱好',
         field: '',
         value: '',
-        type: 'select',
+        component: 'chant-picker',
         placeholder: '请输入爱好',
+        type: 'select',
         config: []
       }
     ]
   },
   style: {
+    backgroundColor: '',
+    padding: 10,
     width: 375
   }
 }

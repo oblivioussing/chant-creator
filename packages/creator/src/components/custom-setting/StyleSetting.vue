@@ -1,7 +1,15 @@
 <template>
   <template v-for="(val, key) of currentStyle" :key="key">
     <el-form-item v-if="attarToName(key)" :label="attarToName(key)">
-      <el-input v-model="currentStyle[key]"></el-input>
+      <!-- 颜色 -->
+      <el-color-picker
+        v-if="hasColor(key)"
+        v-model="currentStyle[key]"
+        size="small"
+      >
+      </el-color-picker>
+      <!-- 输入框 -->
+      <el-input v-else v-model="currentStyle[key]"></el-input>
     </el-form-item>
   </template>
 </template>
@@ -18,6 +26,7 @@ export default {
     // 样式属性转为汉字
     function attarToName(key: string | number) {
       const map: Record<string, string> = {
+        backgroundColor: '背景色',
         borderRadius: '圆角',
         fontSize: '文字大小',
         fontWeight: '文字粗细',
@@ -28,8 +37,13 @@ export default {
       }
       return map[key]
     }
+    // 包含颜色属性
+    function hasColor(key: string) {
+      console.log(key?.includes('color'))
+      return key?.toLocaleLowerCase().includes('color')
+    }
 
-    return { currentStyle, attarToName }
+    return { currentStyle, attarToName, hasColor }
   }
 }
 </script>

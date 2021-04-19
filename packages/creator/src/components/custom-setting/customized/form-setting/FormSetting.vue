@@ -12,10 +12,6 @@
   <el-form-item label="标题字重">
     <font-weight-select v-model="currentAttr.titleWeight"> </font-weight-select>
   </el-form-item>
-  <el-form-item label="背景色">
-    <el-color-picker v-model="currentAttr.btnColor" size="small">
-    </el-color-picker>
-  </el-form-item>
   <el-form-item label="api地址">
     <el-input v-model="currentAttr.apiUrl"></el-input>
   </el-form-item>
