@@ -44,7 +44,6 @@ export default {
   position: relative;
   width: 300px;
   .title {
-    font-size: 18px;
     padding-bottom: 20px;
   }
 }

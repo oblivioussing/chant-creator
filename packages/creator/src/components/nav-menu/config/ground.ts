@@ -37,7 +37,7 @@ const form = {
         field: '',
         value: '',
         type: 'select',
-        placeholder: '请输入爱好',
+        placeholder: '请选择爱好',
         config: []
       }
     ]

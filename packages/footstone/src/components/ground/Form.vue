@@ -5,10 +5,12 @@
       :key="index"
       :name="item.type"
       :label="item.label"
+      :readonly="hasPopup(item.type)"
+      :placeholder="item.placeholder"
     >
     </chant-field>
     <div class="btn">
-      <chant-button round block type="primary"> 提交 </chant-button>
+      <chant-button round block type="primary">提交</chant-button>
     </div>
   </van-form>
 </template>

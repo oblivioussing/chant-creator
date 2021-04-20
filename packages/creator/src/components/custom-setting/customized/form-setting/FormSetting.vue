@@ -15,6 +15,7 @@
   <el-form-item label="api地址">
     <el-input v-model="currentAttr.apiUrl"></el-input>
   </el-form-item>
+  <div class="p-b-10">表单设置</div>
 </template>
 
 <script lang="ts">
