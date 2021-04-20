@@ -1,5 +1,4 @@
 import qs from 'qs'
-import { ElMessage } from 'element-plus'
 import core from '../utils/core'
 import apiUrl from './url'
 import 'abortcontroller-polyfill/dist/polyfill-patch-fetch'
@@ -43,12 +42,12 @@ interface MessageConfig {
 }
 
 class Shiki {
-  // 基础请求url
-  private baseurl = apiUrl.base
   // 请求拦截器
   private requestInterceptors: Function[] = []
   // 响应拦截器
   private responseInterceptors: Function[] = []
+  // 基础请求url
+  baseurl = apiUrl.base
   // 拦截器
   interceptors = {
     request: {
@@ -62,6 +61,8 @@ class Shiki {
       }
     }
   }
+  // 自定义message方法
+  customMessage = (msg: string): void => {}
 
   // get请求
   async get(url: string, config: RequestConfig): Promise<any> {
@@ -249,7 +250,7 @@ class Shiki {
     if (requestConfig.method === Method.Get && isSuccess) {
       return
     }
-    let messageText = result && result.msg
+    let messageText = result?.msg
     if (error) {
       messageText = error.toString()
     }
@@ -260,7 +261,7 @@ class Shiki {
     if (core.isProd() && !result) {
       messageText = '系统繁忙,请稍后再试'
     }
-    ElMessage.error(messageText)
+    this.customMessage(messageText as string)
   }
   // 返回结果处理
   private responseProcess(result: Result, config: RequestConfig): any {

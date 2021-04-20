@@ -23,7 +23,7 @@
 <script lang="ts">
 import { reactive, ref } from 'vue'
 import { useStore } from 'vuex'
-import shiki from '@chant/common/api/shiki'
+import shiki from '@/api/shiki'
 import { core } from '@chant/common/utils'
 import element from '@/utils/element'
 import { ElMessage } from 'element-plus'
