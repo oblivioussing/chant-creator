@@ -36,9 +36,8 @@ const form = {
         label: '爱好',
         field: '',
         value: '',
-        component: 'chant-picker',
-        placeholder: '请输入爱好',
         type: 'select',
+        placeholder: '请输入爱好',
         config: []
       }
     ]
