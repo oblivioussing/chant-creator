@@ -15,7 +15,13 @@
   <el-form-item label="api地址">
     <el-input v-model="currentAttr.apiUrl"></el-input>
   </el-form-item>
-  <div class="p-b-10">表单设置</div>
+  <div>表单控件</div>
+  <div class="form-widget">
+    <i class="el-icon-remove-outline ic"></i>
+    <div class="label">爱好</div>
+    <div class="controll">请输入</div>
+    <i class="el-icon-edit ic"></i>
+  </div>
 </template>
 
 <script lang="ts">
@@ -38,4 +44,22 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.form-widget {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin: 15px 0;
+  .ic {
+    cursor: pointer;
+  }
+  .label {
+    padding-left: 5px;
+    width: 93px;
+  }
+  .controll {
+    color: $silver-chalice;
+    flex: 1;
+  }
+}
+</style>
