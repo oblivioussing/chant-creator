@@ -39,7 +39,6 @@ export default {
     }
     // 包含颜色属性
     function hasColor(key: string) {
-      console.log(key?.includes('color'))
       return key?.toLocaleLowerCase().includes('color')
     }
 

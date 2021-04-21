@@ -7,8 +7,6 @@
       </swipe-setting>
       <!-- 表单设置 -->
       <form-setting v-if="current.component === 'chant-form'"> </form-setting>
-      <!-- 属性设置 -->
-      <attr-setting></attr-setting>
       <!-- 样式设置 -->
       <style-setting></style-setting>
     </el-form>

@@ -1,6 +1,5 @@
 import { defineAsyncComponent } from 'vue'
 
-const AttrSetting = defineAsyncComponent(() => import('../AttrSetting.vue'))
 const StyleSetting = defineAsyncComponent(() => import('../StyleSetting.vue'))
 const SwipeSetting = defineAsyncComponent(
   () => import('../customized/swipe-setting/SwipeSetting.vue')
@@ -10,7 +9,6 @@ const FormSetting = defineAsyncComponent(
 )
 
 export default {
-  AttrSetting,
   StyleSetting,
   SwipeSetting,
   FormSetting
