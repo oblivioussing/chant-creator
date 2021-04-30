@@ -62,7 +62,7 @@ class Shiki {
     }
   }
   // 自定义message方法
-  customMessage = (msg: string) => msg
+  customMessage = (msg: string) => {}
 
   // get请求
   async get(url: string, config: RequestConfig): Promise<any> {
