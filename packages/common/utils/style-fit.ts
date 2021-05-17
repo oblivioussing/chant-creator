@@ -1,4 +1,4 @@
-import core from './core'
+import core from '../share/core'
 
 export default {
   // 单位添加px

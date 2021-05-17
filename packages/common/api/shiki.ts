@@ -1,5 +1,5 @@
 import qs from 'qs'
-import core from '../utils/core'
+import core from '../share/core'
 import apiUrl from './url'
 import 'abortcontroller-polyfill/dist/polyfill-patch-fetch'
 

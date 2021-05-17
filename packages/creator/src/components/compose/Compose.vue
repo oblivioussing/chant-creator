@@ -29,8 +29,8 @@
 <script lang="ts">
 import { computed, reactive } from 'vue'
 import { useStore } from 'vuex'
-import { styleFit } from '@chant/common/utils'
-import base from '@/utils/base'
+import styleFit from '@chant/common/utils/style-fit'
+import base from '@/share/base'
 
 type Nest = {
   element: Record<string, any>

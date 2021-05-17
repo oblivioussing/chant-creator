@@ -1,4 +1,4 @@
-import { core } from '@chant/common/utils'
+import { core } from '@chant/common/share'
 
 type State = {
   componentList: any[]

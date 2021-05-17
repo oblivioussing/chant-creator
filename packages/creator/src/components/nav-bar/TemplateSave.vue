@@ -24,8 +24,8 @@
 import { reactive, ref } from 'vue'
 import { useStore } from 'vuex'
 import shiki from '@/api/shiki'
-import { core } from '@chant/common/utils'
-import element from '@/utils/element'
+import { core } from '@chant/common/share'
+import element from '@/share/element'
 import { ElMessage } from 'element-plus'
 
 export default {
