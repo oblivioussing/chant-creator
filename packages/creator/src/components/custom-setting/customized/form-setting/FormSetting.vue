@@ -17,7 +17,13 @@
     <template #reference>
       <el-button type="primary" class="form-widget-add">添加</el-button>
     </template>
-    <div>1233</div>
+    <el-button type="primary" size="small">文本框</el-button>
+    <el-button type="primary" size="small">长文本框</el-button>
+    <el-button type="primary" size="small">数值</el-button>
+    <el-button type="primary" size="small">单选框</el-button>
+    <el-button type="primary" size="small">下拉选择框</el-button>
+    <el-button type="primary" size="small">日期框</el-button>
+    <el-button type="primary" size="small">纯文本</el-button>
   </el-popover>
 </template>
 
