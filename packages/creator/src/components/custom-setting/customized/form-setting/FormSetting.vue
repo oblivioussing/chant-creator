@@ -17,13 +17,15 @@
     <template #reference>
       <el-button type="primary" class="form-widget-add">添加</el-button>
     </template>
-    <el-button type="primary" size="small">文本框</el-button>
-    <el-button type="primary" size="small">长文本框</el-button>
-    <el-button type="primary" size="small">数值</el-button>
-    <el-button type="primary" size="small">单选框</el-button>
-    <el-button type="primary" size="small">下拉选择框</el-button>
-    <el-button type="primary" size="small">日期框</el-button>
-    <el-button type="primary" size="small">纯文本</el-button>
+    <div class="widget-type">
+      <el-button type="primary" size="small">文本框</el-button>
+      <el-button type="primary" size="small">长文本框</el-button>
+      <el-button type="primary" size="small">数值</el-button>
+      <el-button type="primary" size="small">单选框</el-button>
+      <el-button type="primary" size="small">下拉选择框</el-button>
+      <el-button type="primary" size="small">日期框</el-button>
+      <el-button type="primary" size="small">纯文本</el-button>
+    </div>
   </el-popover>
 </template>
 
@@ -64,5 +66,13 @@ export default {
 .form-widget-add {
   margin-bottom: 15px;
   width: 100%;
+}
+.widget-type {
+  .el-button {
+    width: 120px;
+  }
+  .el-button + .el-button {
+    margin: 10px 0 0 0;
+  }
 }
 </style>
