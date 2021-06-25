@@ -4,7 +4,7 @@
   "main": "index.ts",
   "license": "MIT",
   "dependencies": {
-    "vant": "^3.0.13",
-    "vue": "^3.0.7"
+    "vant": "^3.1.0",
+    "vue": "^3.1.2"
   }
 }

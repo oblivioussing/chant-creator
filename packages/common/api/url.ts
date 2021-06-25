@@ -1,4 +1,5 @@
-type stageType = 'dev' | 'test' | 'prod' | 'local'
+import { stageType } from '../type'
+
 // dev,test,prod,local
 const stage = import.meta.env.MODE as stageType
 

@@ -7,17 +7,17 @@
     "serve": "vite preview"
   },
   "dependencies": {
-    "@chant/common": "1.0.0",
+    "chant": "1.0.0",
     "@chant/footstone": "1.0.0",
-    "element-plus": "^1.0.2-beta.39",
-    "vue": "^3.0.7",
+    "element-plus": "^1.0.2-beta.52",
+    "vue": "^3.1.2",
     "vue-router": "^4.0.4",
     "vuedraggable": "^4.0.1",
-    "vuex": "^4.0.0"
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^1.1.4",
     "@vue/compiler-sfc": "^3.0.5",
-    "vite": "^2.1.5"
+    "vite": "^2.3.5"
   }
 }
